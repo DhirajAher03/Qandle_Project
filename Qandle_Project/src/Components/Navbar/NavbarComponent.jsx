@@ -26,6 +26,7 @@ import './Navbar.css';
 
 const NavbarComponent = () => {
   return (
+    <>
     <Navbar expand="lg" className="bg-primary shadow-sm p-0 position-fixed w-100">
       <Container fluid className="px-4">
         {/* Brand and Toggle */}
@@ -125,6 +126,7 @@ const NavbarComponent = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+   </>
   );
 };
 
