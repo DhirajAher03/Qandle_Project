@@ -1,0 +1,32 @@
+.Sidebar{
+    position: fixed;
+    padding-top: 58px;
+    width: 22%;
+    height: 93vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    overflow: auto;
+}
+.Iconimg{
+    height: 50px;
+    width: 200px;
+    object-fit: cover;
+}
+.Profile-Pic{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.Sidebar-menu{
+    border-radius: 50px;
+    box-shadow: 0 5px 3px -2px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    width: 280px;
+    padding:.8rem;
+}
+.Sidebar-menu:hover{
+    background-color: #c5f6f9;
+    cursor: pointer;
+    transition: .5s;
+}
+
