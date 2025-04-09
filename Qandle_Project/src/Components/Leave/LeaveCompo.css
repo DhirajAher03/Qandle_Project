@@ -1,0 +1,75 @@
+/* *{
+    background-color:#f7f7f7 ;
+} */
+.nav-tabs{
+    border: 1px solid white !important;
+    background-color: white !important;
+}
+.nav-tabs .nav-link.active {
+    border: none !important;
+    border-bottom: 3px solid #3a38e7 !important;  /* Or any other color you want */
+    background-color: transparent !important;
+    color: #3a38e7 !important;
+    font-weight: 600;
+}
+
+/* Optional: Style inactive tabs */
+.nav-tabs .nav-link {
+    border: none !important;
+    color: #555 !important;
+    background-color: transparent !important;
+}
+
+/* On hover */
+.nav-tabs .nav-link:hover {
+    color: #3a38e7;
+    background-color: #f8f8f8;
+}
+
+
+/* Status component styling */
+
+.leave-dropdown {
+    background-color: white !important;
+    border: 1px solid #007bff !important; /* Bootstrap primary blue */
+    color: #000 !important;
+    box-shadow: none !important;
+}
+
+/* Remove background for all tab nav items */
+.nav-tabs .nav-link {
+    background-color: white !important;
+    border: none !important;
+    color: #333;
+}
+
+/* Active tab customization */
+.nav-tabs .nav-link.active {
+    background-color: white !important;
+    border: none !important;
+    border-bottom: 3px solid #007bff !important; /* Optional bottom border */
+    font-weight: 600;
+    color: #007bff !important;
+}
+
+/* Hover effect */
+.nav-tabs .nav-link:hover {
+    background-color: #f1f1f1 !important;
+    color: #007bff;
+}
+
+.status-content{
+    background-color: rgb(252, 249, 235) !important;
+    /* border-radius: 10px; */
+   /* border: 2px solid #ddeec3 !important; */
+    padding: 20px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.status-cards{
+    background-color: white !important;
+    /* border-radius: 10px; */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}

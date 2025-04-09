@@ -1,14 +1,64 @@
-const LeaveComponent = () => { 
+import { IoPlayCircleOutline } from "react-icons/io5";
+import { SlCalender } from "react-icons/sl";
+import { Tabs, Tab, Modal } from 'react-bootstrap';
+import { useState } from 'react';
+import StatusComponent from "./StatusComponent";
 
-    return(
+const LeaveComponent = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const handleShow = () => setShowModal(true);
+    const handleClose = () => setShowModal(false);
+
+    return (
         <>
-            <div className="dashboard container">
-                <div className="dash-nav d-flex pt-4 pb-2 justify-content-md-between justify-content-around container">
-                  <p> <span className='dash-icon shadow '><box-icon name='home-heart' color='#ffff' width='30px' height='30px'></box-icon></span><span>Dashboard</span></p>
-                  <p><span>Overview</span><box-icon name='info-circle' color='#da8cff' ></box-icon></p>
+            <div className="leave container mt-4">
+                {/* Header */}
+                <div className="d-flex justify-content-between align-items-center pb-3">
+                    <p className="d-flex align-items-center mb-0">
+                        <span className='leave-icon me-2'><SlCalender size={24} /></span>
+                        <span className="fs-3 fw-bold">Leave</span>
+                    </p>
+                    <button 
+                        className="btn btn-link text-decoration-none d-flex align-items-center"
+                        onClick={handleShow}
+                    >
+                        How to use this section? <IoPlayCircleOutline size={20} className="ms-1" />
+                    </button>
                 </div>
-                </div>
+
+                {/* Tabs */}
+                <Tabs defaultActiveKey="status" id="leave-tabs" className="mb-3">
+                    <Tab eventKey="status" title="Status">
+                        <StatusComponent />
+                    </Tab>
+                    <Tab eventKey="requests" title="Requests">
+                        <p>Tab content for Requests</p>
+                    </Tab>
+                    <Tab eventKey="holiday" title="Holiday List">
+                        <p>Tab content for Holiday List</p>
+                    </Tab>
+                </Tabs>
+            </div>
+
+            {/* Modal for Video How to use Leave section? */}
+            <Modal show={showModal} onHide={handleClose} size="lg" centered>
+                <Modal.Header closeButton>
+                    <Modal.Title>How to use Leave section?</Modal.Title>
+                </Modal.Header>
+                <Modal.Body className="p-0">
+                    <div className="ratio ratio-16x9">
+                        <iframe
+                            src="https://player.vimeo.com/video/325407543"
+                            title="How to use this section"
+                            allow="autoplay; fullscreen"
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                </Modal.Body>
+            </Modal>
         </>
     );
 };
+
 export default LeaveComponent;
