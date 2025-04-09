@@ -13,6 +13,7 @@ import { CiLogout } from "react-icons/ci";
 import { FaRegBell } from "react-icons/fa";
 import { FaPeopleRobbery } from "react-icons/fa6";
 import { GiLevelFourAdvanced } from "react-icons/gi";
+import { Link } from 'react-router-dom'
 
 const SidebarComponent = () => {
   return (
@@ -26,11 +27,12 @@ const SidebarComponent = () => {
             <img className='Profile-Pic' src={ProfilePic} />
             Vivek Sanjay Patil
           </div>
-          <div as={NavLink} className='Sidebar-menu'>
+          <div as={Link} to='/'className='Sidebar-menu'>
             <SlHome className='me-3 fs-5 text-primary' />Overview
           </div>
-          <div as={NavLink} className='Sidebar-menu'>
-            <IoAlarmOutline className='me-2 fs-4 text-danger' /> My Leave
+          <div className='Sidebar-menu'>
+            <IoAlarmOutline className='me-2 fs-4 text-danger' /> 
+            <Link to='/leave'>My Leave</Link>
           </div>
           <div as={NavLink} className='Sidebar-menu'>
             <IoKeyOutline className='me-2 fs-4 text-success' />    My Attendace

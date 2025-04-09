@@ -1,0 +1,44 @@
+/* LeaveWithoutPayCard.css */
+
+.leave-card {
+    max-width: 370px;
+    min-height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    padding: 1rem;
+    border: 1px solid #c8cccf;
+  }
+  
+  .leave-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .leave-card-body {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .leave-card-icon {
+    font-size: 28px;
+    color: #9c27b0;
+  }
+  
+  .leave-card-value {
+    font-size: 16px;
+  }
+  
+  .leave-card-subtext {
+    font-size: 14px;
+  }
+  
+  .leave-card-label {
+    font-size: 12px;
+  }
+  
+  .text-purple {
+    color: #6f42c1;
+  }
+  

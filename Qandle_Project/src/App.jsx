@@ -12,6 +12,9 @@ function App() {
 
   return (
     <>
+    
+    {/* <LoginComponent /> */}
+    
       <BrowserRouter>
         <Row lg={1}>
           <NavbarComponent />
@@ -23,10 +26,12 @@ function App() {
           <Col lg={9}>
             <Routes>
               <Route path="/" element={<Overview />} className="elements" />
+              <Route path="/leave" element={<LeaveComponent />} className="elements" />
             </Routes>
           </Col>
         </Row>
       </BrowserRouter>
+      
     </>
   )
 }
