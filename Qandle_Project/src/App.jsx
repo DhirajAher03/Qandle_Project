@@ -12,18 +12,18 @@ function App() {
 
   return (
     <>
-    <LoginComponent/>
+    {/* <LoginComponent/> */}
       <BrowserRouter>
-        <Row lg={1}>
+        <Row lg={1} className="custom-row">
           <NavbarComponent />
         </Row>
-        <Row lg={11} className="custom-row">
+        <Row lg={11} className="custom-row-2">
           <Col lg={3}>
-            <SidebarComponent />
+            {/* <SidebarComponent /> */}
           </Col>
           <Col lg={9}>
             <Routes>
-              <Route path="/" element={<Overview />} className="elements" />
+              <Route path="/" element={<Overview />} />
             </Routes>
           </Col>
         </Row>
