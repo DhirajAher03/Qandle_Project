@@ -21,7 +21,7 @@ function App() {
         </Row>
         <Row lg={11} className='custom-row'>
           <Col lg={3}>
-            <SidebarComponent />
+            {/* <SidebarComponent /> */}
           </Col>
           <Col lg={9}>
             <Routes>

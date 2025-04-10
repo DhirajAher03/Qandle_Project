@@ -12,7 +12,7 @@ const LeaveComponent = () => {
 
     return (
         <>
-            <div className="leave container mt-4">
+            <div className="leave container pt-4 bg-light">
                 {/* Header */}
                 <div className="d-flex justify-content-between align-items-center pb-3">
                     <p className="d-flex align-items-center mb-0">
@@ -28,7 +28,7 @@ const LeaveComponent = () => {
                 </div>
 
                 {/* Tabs */}
-                <Tabs defaultActiveKey="status" id="leave-tabs" className="mb-3">
+                <Tabs defaultActiveKey="status" id="leave-tabs" className="pb-1">
                     <Tab eventKey="status" title="Status">
                         <StatusComponent />
                     </Tab>
