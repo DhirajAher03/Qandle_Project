@@ -1,9 +1,6 @@
-.sidebar{
-  margin-left: 200px;
-}
 .custom-row {
   --bs-gutter-x: 0 !important;
 }
 .custom-row-2 {
-  margin-top: 58px !important;
+margin-top: 58px !important;
 }

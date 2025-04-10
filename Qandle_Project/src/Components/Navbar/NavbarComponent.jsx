@@ -5,11 +5,11 @@ import { LuShipWheel } from "react-icons/lu";
 import { BiLike } from "react-icons/bi";
 import { TiPrinter } from "react-icons/ti";
 import { GrDocumentText } from "react-icons/gr";
+import { FaBars } from 'react-icons/fa';
 
+import "./Navbar.css";
 
-import './Navbar.css';
-
-const NavbarComponent = () => {
+const NavbarComponent = ({ toggleSidebar }) => {
   return (
     <>
       <Navbar expand="lg" className="bg-primary shadow-sm p-0 position-fixed w-100 z-1">
