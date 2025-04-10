@@ -27,9 +27,9 @@ const SidebarComponent = () => {
             <img className='Profile-Pic' src={ProfilePic} />
             Vivek Sanjay Patil
           </div>
-          <div as={Link} to='/'className='Sidebar-menu'>
+          <Link to='/'className='Sidebar-menu'>
             <SlHome className='me-3 fs-5 text-primary' />Overview
-          </div>
+          </Link>
           <div className='Sidebar-menu'>
             <IoAlarmOutline className='me-2 fs-4 text-danger' /> 
             <Link to='/leave'>My Leave</Link>
