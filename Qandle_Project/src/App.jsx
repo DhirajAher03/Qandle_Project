@@ -5,10 +5,11 @@ import NavbarComponent from './Components/Navbar/NavbarComponent'
 import Overview from './Components/Overview/Overview'
 import SidebarComponent from './Components/Slidebar/SidebarComponent'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import LeaveComponent from './Components/Leave/LeaveComponent'
+
 import { Col, Row } from 'react-bootstrap'
 import Attendance from './Components/Attendance/Attendance'
 import { useState } from 'react'
-import LeaveComponent from './Components/Leave/LeaveComponent'
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -41,7 +42,7 @@ function App() {
           </Col>
         </Row>
       </BrowserRouter>
-      
+
     </>
   )
 }
