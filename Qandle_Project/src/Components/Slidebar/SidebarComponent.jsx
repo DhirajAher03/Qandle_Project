@@ -24,7 +24,7 @@ const SidebarComponent = ({ show, closeSidebar }) => {
     <>
     {/* <div className={`sidebar ${show ? 'show' : ''}`}> */}
 
-      <Row className="Sidebar pt-4 pb-3 z-1">
+      <Row className="Sidebar pt-4 pb-3 z-1 d-none d-lg-block">
         <Col className="d-flex flex-column row-gap-2">
           <div className="img d-flex justify-content-center">
             <img className="Iconimg " src={sumagoIcon} alt="img not Found" />
@@ -34,14 +34,14 @@ const SidebarComponent = ({ show, closeSidebar }) => {
             <span className="fw-bold ">Vivek Sanjay Patil</span>
           </div>
           </Col>
-          <Col className="menuList pb-5 d-flex flex-column column gap-3">
+          <Col className="menuList pb-4 d-flex flex-column column gap-3">
             <Link to="/" onClick={closeSidebar} className="Sidebar-menu">
               <SlHome className="me-3 fs-5 text-primary" />Overview
             </Link>
-            <Link to=" " onClick={closeSidebar}  className="Sidebar-menu">
+            <Link to="/leave" onClick={closeSidebar}  className="Sidebar-menu">
               <IoAlarmOutline className="me-2 fs-4 text-danger" /> My Leave
             </Link>
-            <Link to="/Attendance" onClick={closeSidebar} className="Sidebar-menu">
+            <Link to="/attendance" onClick={closeSidebar} className="Sidebar-menu">
               <IoKeyOutline className="me-2 fs-4 text-success" />My Attendace
             </Link>
             <Link to=" " onClick={closeSidebar} className="Sidebar-menu">
@@ -80,6 +80,7 @@ const SidebarComponent = ({ show, closeSidebar }) => {
             <Link to=" " className="Sidebar-menu">
               <GiLevelFourAdvanced className="me-2fs-4 text-primary" />Knowledge Base
             </Link>
+            <br />
           </Col>
         
       </Row>

@@ -1,18 +1,18 @@
 .Sidebar{
     background-color: white;
     position: fixed;
-    width: 18%;
+    width: 17%;
     height: 100%;
     padding-left: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 .Iconimg{
     height: 50px;
-    min-width: 230px;
+    min-width: 180px;
     object-fit: cover;
 }
 .profileName{
-    min-width: 230px;
+    min-width: 170px;
 }
 .Profile-Pic{
     height: 40px;
@@ -28,7 +28,7 @@
     border-radius: 50px;
     box-shadow: 0 5px 3px -2px rgba(0, 0, 0, 0.1);
     height: 50px;
-    min-width: 230px;
+    min-width: 180px;
     padding:.8rem;
     text-decoration: none;
     color: black;

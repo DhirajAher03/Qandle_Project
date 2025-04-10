@@ -33,8 +33,8 @@ const NavbarComponent = ({ toggleSidebar }) => {
       >
         <Container fluid className="px-4">
           {/* Hamburger Icon for Mobile and tablet View */}
-          <Button className="d-lg-none" onClick={toggleSidebar}>
-            <FaBars  size={24} />
+          <Button className="btn border-dark d-lg-none" onClick={toggleSidebar}>
+            <FaBars size={20} className="text-dark" />
           </Button>
           {/* Brand and Toggle */}
           <Navbar.Brand

@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Col, Row } from 'react-bootstrap'
 import Attendance from './Components/Attendance/Attendance'
 import { useState } from 'react'
+import LeaveComponent from './Components/Leave/LeaveComponent'
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -27,18 +28,20 @@ function App() {
           <NavbarComponent toggleSidebar={toggleSidebar}/>
         </Row>
         <Row lg={11} className='custom-row-2'>
-          <Col lg={2}>
+          <Col className='col-lg-2 col-0'>
             <SidebarComponent show={showSidebar} closeSidebar={closeSidebar}/>
             {showSidebar && <div className="overlay" onClick={closeSidebar}></div>}
           </Col>
-          <Col lg={10}>
+          <Col className='col-12 col-lg-10'>
             <Routes>
               <Route path="/" element={<Overview />}/>
-              <Route path="/Attendance" element={<Attendance/>}/>
+              <Route path="/leave" element={<LeaveComponent />}/>
+              <Route path="/attendance" element={<Attendance/>}/>
             </Routes>
           </Col>
         </Row>
       </BrowserRouter>
+      
     </>
   )
 }
