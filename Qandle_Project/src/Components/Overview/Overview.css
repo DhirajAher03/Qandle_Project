@@ -128,7 +128,7 @@
   min-height: 400px;
 }
 
-.leave-card {
+.overview-leave-card {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -150,7 +150,7 @@
     flex-direction: column !important;
   }
 
-  .leave-card {
+  .overview-leave-card {
     flex-direction: column;
     text-align: center;
   }
@@ -158,5 +158,8 @@
   .holiday-card {
     flex-direction: column;
     text-align: center;
+  }
+  .nav-btn {
+    font-size: 1.1rem;
   }
 }

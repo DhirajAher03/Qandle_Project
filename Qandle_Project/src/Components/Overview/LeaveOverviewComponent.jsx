@@ -17,31 +17,49 @@ const LeaveOverviewComponent = () => {
 
   return (
     <Container className='p-3'>
-      <Card className="p-3 rounded-4 border-0 box-shadow leave-dashboard-wrapper bg-white d-flex flex-column flex-md-row gap-3">
+      <Card className="p-3 rounded-4 border-0 box-shadow leave-dashboard-wrapper bg-white d-flex flex-column flex-md-row gap-3 ">
         {/* Left Side */}
         <div className="flex-grow-1 border-end pe-md-4">
           <h5 className="fw-bold mb-3">Leave</h5>
 
           {/* Leave Balance */}
-          <div className="d-flex justify-content-between align-items-center mb-4">
+          <div className="row g-3 mb-4">
             {/* Card 1 */}
-            <div className="leave-card text-center border rounded-pill bg-light p-3">
-              <button className="nav-btn"><IoChevronBackSharp /></button>
-              <div>
-                <h4 className="mb-1 text-primary fw-bold">02 <span className="small fw-semibold">(Day(s))</span></h4>
-                <p className="mb-0 fw-semibold">Casual Leave</p>
+            <div className="col-12 col-md-6">
+              <div className="d-flex align-items-center justify-content-between bg-light border rounded-pill px-4 py-3 h-100">
+                <div className="d-flex align-items-center gap-3 flex-wrap">
+                  <button className="btn btn-link p-0 text-primary nav-btn">
+                    <IoChevronBackSharp />
+                  </button>
+                  <div>
+                    <h5 className="mb-1 text-primary fw-bold">
+                      02 <span className="small fw-semibold">(Day(s))</span>
+                    </h5>
+                    <p className="mb-0 fw-semibold small">Casual Leave</p>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="leave-card text-center">
-              <div>
-                <h5 className="mb-1 text-primary fw-bold">As per need <span className="small fw-semibold">(Day(s))</span></h5>
-                <p className="mb-0 fw-semibold">Leave Without Pay</p>
+            <div className="col-12 col-md-6">
+              <div className="d-flex align-items-center justify-content-between bg-light border rounded-pill px-4 py-3 h-100">
+                <div className="d-flex align-items-center gap-3 flex-wrap">
+                  <div>
+                    <h5 className="mb-1 text-primary fw-bold">
+                      As per need <span className="small fw-semibold">(Day(s))</span>
+                    </h5>
+                    <p className="mb-0 fw-semibold small">Leave Without Pay</p>
+                  </div>
+                  <button className="btn btn-link p-0 text-primary nav-btn">
+                    <IoChevronForwardSharp />
+                  </button>
+                </div>
               </div>
-              <button className="nav-btn"><IoChevronForwardSharp /></button>
             </div>
           </div>
+
+
 
           {/* Period Dropdown */}
           <div className="d-flex justify-content-center mb-3">
@@ -61,13 +79,13 @@ const LeaveOverviewComponent = () => {
 
             <div className="holiday-card mt-2 rounded-3  px-3 py-2">
               <div className="d-flex align-items-center justify-content-between gap-2">
-              <button className="nav-btn"><IoChevronBackSharp /></button>
-              <div className="text-start">
-                <p className="mb-1 fw-bold text-warning">Maharashtra Din/ Labor Day</p>
-                <small className="text-muted">Thursday, 01-May-2025</small>
+                <button className="nav-btn"><IoChevronBackSharp /></button>
+                <div className="text-start">
+                  <p className="mb-1 fw-bold text-warning">Maharashtra Din/ Labor Day</p>
+                  <small className="text-muted">Thursday, 01-May-2025</small>
+                </div>
+                <button className="nav-btn"><IoChevronForwardSharp /></button>
               </div>
-              <button className="nav-btn"><IoChevronForwardSharp /></button>
-            </div>
             </div>
           </div>
         </div>

@@ -47,8 +47,7 @@ const TimeAndAttendenceComponent = () => {
     <>
       <Container className='p-3'>
         <h4 className="fw-bold mb-3">Overview</h4>
-        <Card className="p-3 box-
-        shadow rounded-4 border-0">
+        <Card className="p-3 box-shadow rounded-4 border-0">
           <h5 className="fw-bold mb-3">Time & Attendance</h5>
           <Row className="custom-row">
             {/* Left Part: Time Data */}
