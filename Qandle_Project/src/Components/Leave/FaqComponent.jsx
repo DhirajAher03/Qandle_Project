@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal, Button, Accordion } from 'react-bootstrap';
-import './FaqCompo.css'
+
+import './LeaveCompo.css'
 const FaqComponent = ({ show, handleClose }) => {
   return (
     <Modal show={show} onHide={handleClose} centered size="md">

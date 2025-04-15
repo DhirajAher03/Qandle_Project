@@ -18,7 +18,9 @@ function App() {
 
   return (
     <>
-    {/* <LoginComponent/> */}
+      {/* <LoginComponent/> */}
+
+
       <BrowserRouter>
         <Row lg={1} className='custom-row'>
           <NavbarComponent toggleSidebar={toggleSidebar} />

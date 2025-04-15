@@ -5,13 +5,12 @@ import './LeaveCompo.css';
 import { CiCircleList } from "react-icons/ci";
 import { SiGraphql } from "react-icons/si";
 import { MdOutlineMessage } from 'react-icons/md';
-import LeaveCard from './CasualLeave';
-import LeaveWithoutPayCard from './LeaveWithoutPay';
 import LeaveTable from './LeaveTable';
 import FaqComponent from './FaqComponent';
+import GraphComponent from './GraphComponent';
 
 const StatusComponent = () => {
-  const [viewType, setViewType] = useState("graph");
+  const [viewType, setViewType] = useState("table");
   const [selectedLeave, setSelectedLeave] = useState("Select Leave Type");
 
   const [showFAQ, setShowFAQ] = useState(false); // Modal open/close state
@@ -21,7 +20,7 @@ const StatusComponent = () => {
       {/* Leave Type Dropdown & View Toggle */}
       <div className="d-flex justify-content-between align-items-center status-content">
         <Dropdown onSelect={(key) => setSelectedLeave(key)}>
-          <Dropdown.Toggle id="dropdown-basic" className="leave-dropdown">
+          <Dropdown.Toggle id="dropdown-basic" className="leave-dropdown z-n1">
             {selectedLeave}
           </Dropdown.Toggle>
           <Dropdown.Menu>
@@ -54,29 +53,13 @@ const StatusComponent = () => {
 
       {/* Leave Cards */}
       {viewType === 'graph' ? (
-        <div className="status-cards">
-          <div className="row ">
-            <div className="col-md-6 mb-3 d-flex justify-content-center">
-              <LeaveCard
-                title="Casual Leave"
-                accrued={4}
-                usedTillDate={2}
-                usedStar={2}
-                requested={0}
-                balance={2}
-                chartColor="#00aaff"
-              />
-            </div>
-            <div className="col-md-6 mb-3">
-              <LeaveWithoutPayCard />
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div className="table-responsive mt-3">
-          <LeaveTable />
-        </div>
-      )}
+  <GraphComponent />
+) : (
+  <div className="table-responsive mt-3">
+    <LeaveTable />
+  </div>
+)}
+
 
       {/* FAQ Modal */}
       <FaqComponent show={showFAQ} handleClose={() => setShowFAQ(false)} />
