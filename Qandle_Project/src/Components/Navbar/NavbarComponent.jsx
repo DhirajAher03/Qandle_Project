@@ -1,28 +1,57 @@
-import { Navbar, Nav, Form, FormControl, Dropdown, InputGroup, Container, } from 'react-bootstrap';
-import { Gear, PersonCircle, QuestionCircle, BoxArrowRight, Search, } from 'react-bootstrap-icons';
+import {
+  Navbar,
+  Nav,
+  Form,
+  FormControl,
+  Dropdown,
+  InputGroup,
+  Container,
+  Button
+} from "react-bootstrap";
+import {
+  Gear,
+  PersonCircle,
+  QuestionCircle,
+  BoxArrowRight,
+  Search,
+} from "react-bootstrap-icons";
 import { HiBellAlert } from "react-icons/hi2";
 import { LuShipWheel } from "react-icons/lu";
 import { BiLike } from "react-icons/bi";
 import { TiPrinter } from "react-icons/ti";
 import { GrDocumentText } from "react-icons/gr";
-import { FaBars } from 'react-icons/fa';
+import { FaBars } from "react-icons/fa";
 
 import "./Navbar.css";
 
 const NavbarComponent = ({ toggleSidebar }) => {
   return (
     <>
-      <Navbar expand="lg" className="bg-primary shadow-sm p-0 position-fixed w-100 z-1">
+      <Navbar
+        expand="lg"
+        className="bg-primary shadow-sm p-0 position-fixed w-100 z-1"
+      >
         <Container fluid className="px-4">
           {/* Brand and Toggle */}
-          <Navbar.Brand href="#home" className="fw-semibold logo-text fs-2 text-white">Qandle</Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbar-nav" className="bg-white rounded" />
+          <Button variant="light" className="d-lg-none" onClick={toggleSidebar}>
+            <FaBars />
+          </Button>
+          <Navbar.Brand
+            href="#home"
+            className="fw-semibold logo-text fs-2 text-white"
+          >
+            Qandle
+          </Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls="navbar-nav"
+            className="bg-white rounded"
+          />
 
           {/* Collapse content */}
           <Navbar.Collapse id="navbar-nav">
             {/*Search Bar */}
             <div className="d-flex justify-content-center w-100 my-3 my-lg-0">
-              <Form style={{ maxWidth: '600px' }} className="w-100">
+              <Form style={{ maxWidth: "600px" }} className="w-100">
                 <InputGroup className="w-100">
                   {/* Dropdown */}
                   <Dropdown>
@@ -53,7 +82,6 @@ const NavbarComponent = ({ toggleSidebar }) => {
                     className="border-start-0 border-end-0 px-3 rounded-end-pill"
                     aria-label="Search"
                   />
-
                 </InputGroup>
               </Form>
             </div>
@@ -63,13 +91,17 @@ const NavbarComponent = ({ toggleSidebar }) => {
               <Nav.Link
                 href="#notifications"
                 className="bg-white rounded-circle d-flex align-items-center justify-content-center"
-                style={{ height: '40px', width: '40px' }}
+                style={{ height: "40px", width: "40px" }}
               >
                 <HiBellAlert size={20} className="text-dark" />
               </Nav.Link>
 
               <Dropdown align="end">
-                <Dropdown.Toggle variant="light" id="dropdown-basic" className="d-flex align-items-center icon-rounded text-secondary border-0">
+                <Dropdown.Toggle
+                  variant="light"
+                  id="dropdown-basic"
+                  className="d-flex align-items-center icon-rounded text-secondary border-0"
+                >
                   <PersonCircle size={35} className="me-1" />
                 </Dropdown.Toggle>
                 <Dropdown.Menu>

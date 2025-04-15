@@ -5,6 +5,9 @@ import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { IoPlayCircleOutline } from "react-icons/io5";
 import "./Attendance.css";
+import RequestComponent from "./RequestComponent";
+import ShiftDetailsComponent from "./ShiftDetailsComponent";
+import PolicyDetailsComponent from "./PolicyDetailsComponent";
 
 const Attendance = () => {
   const [showModal, setShowModal] = useState(false);
@@ -50,13 +53,13 @@ const Attendance = () => {
             <StatusTab />
           </Tab>
           <Tab eventKey="Regularize-Requests" title="Regularize-Requests">
-            Regularize Requests Content here...
+            <RequestComponent/>
           </Tab>
           <Tab eventKey="Shift-Details" title="Shift-Details">
-            Shift Details Content here...
+            <ShiftDetailsComponent/>
           </Tab>
           <Tab eventKey="Policy-Details" title="Policy-Details">
-            Policy Details Content here...
+            <PolicyDetailsComponent/>
           </Tab>
         </Tabs>
       </Container>
