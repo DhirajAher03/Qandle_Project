@@ -3,6 +3,7 @@ import TimeAndAttendenceComponent from './TimeAndAttendanceComponent'
 import RequestSummaryComponent from './RequestSummaryComponent'
 import CalenderComponent from './CalenderComponent'
 import LeaveOverviewComponent from './LeaveOverviewComponent'
+import PerformanceComponent from './PerformanceComponent'
 
 const Overview = () => {
   return (
@@ -12,6 +13,7 @@ const Overview = () => {
         <RequestSummaryComponent />
         <CalenderComponent />
         <LeaveOverviewComponent/>
+        <PerformanceComponent/>
       </div>
     </>
   )
