@@ -1,6 +1,4 @@
-/* *{
-    background-color:#f7f7f7 ;
-} */
+
 .nav-tabs{
     border: 1px solid white !important;
     background-color: white !important;
@@ -12,92 +10,49 @@
     color: #3a38e7 !important;
     font-weight: 600;
 }
-
 /* Optional: Style inactive tabs */
 .nav-tabs .nav-link {
     border: none !important;
     color: #555 !important;
     background-color: transparent !important;
 }
-
 /* On hover */
 .nav-tabs .nav-link:hover {
     color: #3a38e7;
     background-color: #f8f8f8;
 }
 
-
 /* Status component styling */
-
 .leave-dropdown {
-    background-color: white !important;
-    border: 1px solid #007bff !important; /* Bootstrap primary blue */
-    color: #000 !important;
-    box-shadow: none !important;
+  background-color: #fff !important;
+  border: 1px solid #007bff !important;
+  color: #000 !important;
+  box-shadow: none !important;
 }
-
-/* Remove background for all tab nav items */
-.nav-tabs .nav-link {
-    background-color: white !important;
-    border: none !important;
-    color: #333;
+.leave-button{
+  background-color: #fff !important;
 }
-
-/* Active tab customization */
-.nav-tabs .nav-link.active {
-    background-color: white !important;
-    border: none !important;
-    border-bottom: 3px solid #007bff !important; /* Optional bottom border */
-    font-weight: 600;
-    color: #007bff !important;
-}
-
-/* Hover effect */
-.nav-tabs .nav-link:hover {
-    background-color: #f1f1f1 !important;
-    color: #007bff;
-}
-
-.status-content{
-    background-color: rgb(252, 249, 235) !important;
-    /* border-radius: 10px; */
-   /* border: 2px solid #ddeec3 !important; */
-    padding: 20px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-}
-
-.status-cards{
-    background-color: white !important;
-    /* border-radius: 10px; */
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+.status-content {
+  background-color: #fcf9eb;
+  padding: 1rem;
 }
 
 
 /* Casual Leave CSS */
-/* .leave-card2 {
-    width: 370px;
-    border-radius: 10px;
-    min-height: 200px;
-  }
-   */
   .chart-wrapper {
     width: 100px;
     height: 100px;
   }
-  
+
   .center-label {
     text-anchor: middle;
     fill: #333;
     white-space: pre-line;
   }
-  
   .stat-blue {
     color: #007bff;
     font-size: 16px;
   }
-  
   .stat-green {
     color: #28a745;
     font-size: 16px;
@@ -122,7 +77,6 @@
   }
   
   /* LeaveWithoutPayCard.css */
-
 .leave-card {
    min-width: 340px;
    max-width: 341px;
@@ -131,6 +85,7 @@
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
     padding: 1rem;
     border: 1px solid #c8cccf;
+    background-color: white;
   }
   
   .leave-card-header {
@@ -138,13 +93,12 @@
     justify-content: space-between;
     align-items: flex-start;
   }
-  
+
   .leave-card-body {
     display: flex;
     align-items: center;
     margin-top: 1rem;
   }
-  
   .leave-card-icon {
     font-size: 28px;
     color: #9c27b0;
@@ -173,3 +127,65 @@
     overflow-y: auto;
   }
   
+/* Request Section CSS */
+
+  /* Calendar Style */
+.custom-calendar {
+  font-family: sans-serif;
+  border: 1px solid #dee2e6;
+  background-color: white;
+}
+
+.react-datepicker__header {
+  background-color: #f6f8fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.react-datepicker__day--today {
+  border: 1px solid #007bff;
+}
+
+/* Request Container */
+.request {
+  background-color: rgb(240, 239, 219);
+}
+
+/* Status Dot Styling */
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-approved {
+  background-color: #28a745;
+}
+
+.status-rejected {
+  background-color: #dc3545;
+}
+
+.status-pending {
+  background-color: #ffc107;
+}
+
+.status-cancelled {
+  background-color: #007bff;
+}
+.react-datepicker__input-container input.form-control {
+  height: 38px; /* default Bootstrap height */
+  font-size: 1rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  color: #212529;
+  width: 100%;
+}
