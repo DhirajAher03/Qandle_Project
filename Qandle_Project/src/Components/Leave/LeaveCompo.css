@@ -156,29 +156,6 @@
   background-color: rgb(240, 239, 219);
 }
 
-/* Status Dot Styling */
-.status-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.status-approved {
-  background-color: #28a745;
-}
-
-.status-rejected {
-  background-color: #dc3545;
-}
-
-.status-pending {
-  background-color: #ffc107;
-}
-
-.status-cancelled {
-  background-color: #007bff;
-}
 .react-datepicker__input-container input.form-control {
   height: 38px; /* default Bootstrap height */
   font-size: 1rem;

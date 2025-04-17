@@ -17,7 +17,7 @@ const LeaveComponent = () => {
                 {/* Header */}
                 <div className="d-flex justify-content-between align-items-center pb-3">
                     <p className="d-flex align-items-center mb-0">
-                        <span className='leave-icon me-2'><SlCalender size={24} /></span>
+                        {/* <span className='leave-icon me-2'><SlCalender size={24} /></span> */}
                         <h3>Leave</h3>
                     </p>
                     <button 
