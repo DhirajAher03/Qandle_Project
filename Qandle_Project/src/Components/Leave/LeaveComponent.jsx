@@ -3,7 +3,8 @@ import { SlCalender } from "react-icons/sl";
 import { Tabs, Tab, Modal } from 'react-bootstrap';
 import { useState } from 'react';
 import StatusComponent from "./StatusComponent";
-
+import RequestComponent from "./RequestComponent";
+import HolidayComponent from "./HolidayComponent";
 const LeaveComponent = () => {
     const [showModal, setShowModal] = useState(false);
 
@@ -17,7 +18,7 @@ const LeaveComponent = () => {
                 <div className="d-flex justify-content-between align-items-center pb-3">
                     <p className="d-flex align-items-center mb-0">
                         <span className='leave-icon me-2'><SlCalender size={24} /></span>
-                        <span className="fs-3 fw-bold">Leave</span>
+                        <h3>Leave</h3>
                     </p>
                     <button 
                         className="btn btn-link text-decoration-none d-flex align-items-center"
@@ -33,10 +34,10 @@ const LeaveComponent = () => {
                         <StatusComponent />
                     </Tab>
                     <Tab eventKey="requests" title="Requests">
-                        <p>Tab content for Requests</p>
+                        <RequestComponent />
                     </Tab>
                     <Tab eventKey="holiday" title="Holiday List">
-                        <p>Tab content for Holiday List</p>
+                        <HolidayComponent />
                     </Tab>
                 </Tabs>
             </div>
