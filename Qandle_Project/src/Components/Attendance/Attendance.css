@@ -1,29 +1,50 @@
+.avg_parent{
+    height: 180px;
+    overflow: auto;
+}
 .record-by-month{
     height: 60px;
     background-color: antiquewhite;
 }
 .avg-Work_Hrs{
     background-color: rgb(215, 255, 242);
-    overflow: auto;
     height: 116px;
 }
 .avg-In-Time{
     background-color: rgb(252, 231, 246);
-    overflow: auto;
+    /* overflow: auto;/ */
     height: 116px;
 }
 .avg-out-time{
     background-color: rgb(215, 234, 255);
-    overflow: auto;
+    /* overflow: auto; */
     height: 116px;
 }
 .avg-break{
     background-color: rgb(255, 228, 215);
-    overflow: auto;
+    /* overflow: auto; */
     height: 116px;
 }
 .paid-days{
     background-color: rgb(255, 219, 186);
-    overflow: auto;
+    /* overflow: auto; */
     height: 116px;
 }
+
+/* Policy Details Component Styling */
+.accordion-button {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 0.5rem !important;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: #0d6efd;
+    background-color: #e9f2ff;
+  }
+  
+  .accordion-body {
+    background-color: #ffffff;
+    padding-top: 1rem;
+  }

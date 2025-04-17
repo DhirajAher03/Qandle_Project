@@ -8,8 +8,8 @@ import {
   InputGroup,
   Container,
   Modal,
-  Button,
-} from 'react-bootstrap';
+  Button
+} from "react-bootstrap";
 import {
   Gear,
   PersonCircle,
@@ -18,24 +18,32 @@ import {
   Search,
 } from 'react-bootstrap-icons';
 import { HiBellAlert } from "react-icons/hi2";
-import { LuShipWheel } from "react-icons/lu";
-import { BiLike } from "react-icons/bi";
-import { TiPrinter } from "react-icons/ti";
-import { GrDocumentText } from "react-icons/gr";
+import { FaBars } from "react-icons/fa";
 
 import './Navbar.css';
 
-const NavbarComponent = () => {
+const NavbarComponent = ({ toggleSidebar }) => {
   const [showSearch, setShowSearch] = useState(false);
+  const [showNotifications, setShowNotifications] = useState(false);
+
+  const notifications = [
+    { id: 1, text: "New message from John" },
+    { id: 2, text: "Meeting reminder at 2 PM" },
+    { id: 3, text: "Task completed successfully" },
+    // Add more notifications as needed
+  ];
 
   return (
     <>
       <Navbar className="bg-primary shadow-sm p-2 position-fixed w-100 z-3">
         <Container fluid className="d-flex align-items-center justify-content-between px-3">
           {/* Brand */}
-          
-          <Navbar.Brand href="#home" className="fw-semibold fs-4 text-white m-0">
-            Qandle
+          <Button variant="light" className="d-lg-none" onClick={toggleSidebar}>
+            <FaBars />
+          </Button>
+
+          <Navbar.Brand href="#home" className="fw-semibold fs-4 text-white m-0 d-none d-lg-block">
+            Sumago
           </Navbar.Brand>
 
           {/* Desktop Search Bar */}
@@ -54,35 +62,16 @@ const NavbarComponent = () => {
             </Form>
           </div>
 
-          {/* Mobile View Buttons */}
-          <div className="d-flex align-items-center gap-3 ms-auto d-lg-none">
-            <Nav.Link
-              onClick={() => setShowSearch(true)}
-              className="bg-white rounded-circle d-flex align-items-center justify-content-center"
-              style={{ height: '35px', width: '35px' }}
-            >
-              <Search size={18} className="text-dark" />
-            </Nav.Link>
-
-            <Nav.Link
-              href="#notifications"
-              className="bg-white rounded-circle d-flex align-items-center justify-content-center"
-              style={{ height: '35px', width: '35px' }}
-            >
-              <HiBellAlert size={18} className="text-dark" />
-            </Nav.Link>
-          </div>
-
-          {/* Notification for Desktop */}
+          {/* Notification Icon */}
           <Nav.Link
-            href="#notifications"
+            onClick={() => setShowNotifications(true)}
             className="bg-white rounded-circle d-none d-lg-flex align-items-center justify-content-center ms-3"
             style={{ height: '40px', width: '40px' }}
           >
             <HiBellAlert size={20} className="text-dark" />
           </Nav.Link>
 
-          {/* Profile Dropdown (same for all views) */}
+          {/* Profile Dropdown */}
           <Dropdown align="end" className="ms-2">
             <Dropdown.Toggle
               variant="light"
@@ -93,41 +82,50 @@ const NavbarComponent = () => {
             </Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item href="#setup">
-                <LuShipWheel size={18} className="me-2 text-info" />
                 Set Up Settings
               </Dropdown.Item>
               <Dropdown.Item href="#account">
-                <Gear size={16} className="me-2" />
                 Account Settings
               </Dropdown.Item>
               <Dropdown.Item href="#favourites">
-                <BiLike size={18} className="me-2 text-warning" />
                 Add to Favourites
               </Dropdown.Item>
-              <Dropdown.Item href="#report">
-                <TiPrinter size={18} className="me-2 text-success" />
-                Report a Problem
-              </Dropdown.Item>
-              <Dropdown.Item href="#report">
-                <QuestionCircle size={16} className="me-2 text-danger" />
-                Product Tour
-              </Dropdown.Item>
-              <Dropdown.Item href="#report">
-                <GrDocumentText size={18} className="me-2 text-primary" />
-                Help Text Visible
-              </Dropdown.Item>
-              <Dropdown.Item href="#report">
-                <QuestionCircle size={16} className="me-2 text-warning" />
-                CS Session
-              </Dropdown.Item>
               <Dropdown.Item href="#logout">
-                <BoxArrowRight size={16} className="me-2 text-danger" />
                 Logout
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Container>
       </Navbar>
+
+      {/* Notification Modal */}
+      <Modal
+        show={showNotifications}
+        onHide={() => setShowNotifications(false)}
+        centered
+        size="lg"
+        className="notification-modal"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Notifications</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {notifications.length > 0 ? (
+            notifications.map((notification) => (
+              <div key={notification.id} className="notification-item mb-3">
+                <p>{notification.text}</p>
+              </div>
+            ))
+          ) : (
+            <p>No new notifications</p>
+          )}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowNotifications(false)}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
       {/* Floating Search Modal for Mobile */}
       <Modal

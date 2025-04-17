@@ -73,3 +73,103 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
+
+
+/* Casual Leave CSS */
+/* .leave-card2 {
+    width: 370px;
+    border-radius: 10px;
+    min-height: 200px;
+  }
+   */
+  .chart-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .center-label {
+    text-anchor: middle;
+    fill: #333;
+    white-space: pre-line;
+  }
+  
+  .stat-blue {
+    color: #007bff;
+    font-size: 16px;
+  }
+  
+  .stat-green {
+    color: #28a745;
+    font-size: 16px;
+  }
+  
+  .stat-orange {
+    color: #fd7e14;
+    font-size: 16px;
+  }
+  
+  .stat-purple {
+    color: #6f42c1;
+    font-size: 16px;
+  }
+  
+  .stat-label {
+    font-size: 14px;
+  }
+  
+  .left-spaced {
+    margin-left: 10px;
+  }
+  
+  /* LeaveWithoutPayCard.css */
+
+.leave-card {
+   min-width: 340px;
+   max-width: 341px;
+    min-height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    padding: 1rem;
+    border: 1px solid #c8cccf;
+  }
+  
+  .leave-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .leave-card-body {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .leave-card-icon {
+    font-size: 28px;
+    color: #9c27b0;
+  }
+  
+  .leave-card-value {
+    font-size: 16px;
+  }
+  
+  .leave-card-subtext {
+    font-size: 14px;
+  }
+  
+  .leave-card-label {
+    font-size: 12px;
+  }
+  
+  .text-purple {
+    color: #6f42c1;
+  }
+  
+
+  /* FAQ component css */
+  .faq-scrollable-body {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  

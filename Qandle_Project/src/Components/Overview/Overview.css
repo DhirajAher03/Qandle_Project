@@ -7,40 +7,84 @@
   align-items: center;
   gap: 8px;
 }
-.time-card-left {
-  background-color: #eaf5ff;
-  border-radius: 40px;
-  min-width: 190px;
-}
-.time-card-right {
-  background-color: #eaf5ff;
-  border-radius: 40px;
-  min-width: 190px;
-}
-.arrow-btn {
-  background-color: white;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.custom-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-.arrow-left {
-  left: 30px;
-  transform: translate(-50%, -50%);
+.left-arrow {
+  left: 0;
 }
-.arrow-right {
-  right: 30px;
-  transform: translate(50%, -50%);
+.right-arrow {
+  right: 0;
 }
+.carousel-card {
+  background-color: #f8f9fa;
+  border-radius: 50px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  min-width: 220px;
+  flex-shrink: 0;
+}
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #4caf50;
+}
+.slick-dots li.slick-active button:before {
+  color: #fbc02d;
+}
+.slick-slider {
+  width: 100% !important;
+}
+
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-list {
+  padding: 0 10px;
+}
+@media (max-width: 768px) {
+  .custom-row {
+    flex-direction: column !important;
+  }
+  .slick-slider {
+    margin-top: 10px;
+  }
+}
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.custom-arrow {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+.custom-arrow:hover {
+  color: #007bff;
+}
+.time-display {
+  font-size: 2.5rem;
+  color: #007bff;
+}
+@media (max-width: 767px) {
+  .bg-light, .bg-warning {
+    width: 100%;
+  }
+}
+
+
 /* Time And Attendence end */
 
 /* Request Summary start */
@@ -70,6 +114,9 @@
 .inner-circle span {
   font-size: 8px;
   font-weight: 600;
+}
+.custom-corner-box {
+ border-radius: 10% 0% 10% 0% !important;
 }
 /* Request Summary end */
 /* calender Start */
@@ -163,3 +210,24 @@
     font-size: 1.1rem;
   }
 }
+/* Make sure the layout is flexible and adjusts to screen size */
+.leave-dashboard-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.leave-dashboard-wrapper .col-md-6 {
+  flex: 1 1 48%;
+  max-width: 48%;
+}
+
+@media (max-width: 768px) {
+  .leave-dashboard-wrapper .col-md-6 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+

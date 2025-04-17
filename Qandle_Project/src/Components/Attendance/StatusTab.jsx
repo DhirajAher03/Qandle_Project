@@ -134,29 +134,29 @@ const StatusTab = () => {
           </Col>
         </Row>
 
-        <Row className="mb-4 text-center">
-          <Col>
+        <Row  className="mb-4 avg_parent text-center p-3 gx-3 gy-3">
+          <Col md={6} className="lg-auto" >
             <div className="p-3 avg-Work_Hrs rounded">
               <FaRegCalendarAlt className="fs-3 text-success" />
               <h5><CountUp end={timeToFloat(summary.avgWorkingHrs)} decimals={2} duration={1.5} /></h5>
               <small>Average Working Hours</small>
             </div>
           </Col>
-          <Col>
+          <Col md={6} className="lg-auto">
             <div className="p-3 avg-In-Time rounded">
               <IoLogInOutline className="fs-3" />
               <h5><CountUp end={timeToFloat(summary.avgInTime)} decimals={2} duration={1.5} /></h5>
               <small>Average In Time</small>
             </div>
           </Col>
-          <Col>
+          <Col md={6} className="lg-auto">
             <div className="p-3 avg-out-time rounded">
               <IoLogOutOutline className="fs-3 text-primary" />
               <h5><CountUp end={timeToFloat(summary.avgOutTime)} decimals={2} duration={1.5} /></h5>
               <small>Average Out Time</small>
             </div>
           </Col>
-          <Col>
+          <Col md={6} className="lg-auto">
             <div className="p-3 avg-break rounded">
               <IoCafeOutline className="fs-3" />
               <h5><CountUp end={parseFloat(summary.avgBreak)} decimals={0} duration={1.5} /></h5>

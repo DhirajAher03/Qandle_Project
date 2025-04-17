@@ -21,7 +21,7 @@ const CalenderComponent = () => {
     { label: 'Week Off', color: '#BFBFBF', days: 8 },
   ];
 
-  const renderHeader = () => (
+   const renderHeader = () => (
     <div className="d-flex justify-content-between align-items-center mb-3 px-2">
       <h5 className="fw-bold mb-3">Calendar</h5>
       <div className="d-flex align-items-center gap-2">
@@ -36,7 +36,7 @@ const CalenderComponent = () => {
     </div>
   );
 
-  const renderDays = () => (
+   const renderDays = () => (
     <div className="row g-0">
       {daysShort.map((day, idx) => (
         <div key={idx} className="col text-white text-center fw-semibold py-2 calendar-day">
@@ -46,7 +46,7 @@ const CalenderComponent = () => {
     </div>
   );
 
-  const renderCells = () => {
+    const renderCells = () => {
     const monthStart = startOfMonth(currentMonth);
     const monthEnd = endOfMonth(monthStart);
     const startDate = startOfWeek(monthStart);
