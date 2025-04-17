@@ -38,7 +38,7 @@ const NavbarComponent = ({ toggleSidebar }) => {
           </Button>
           <Navbar.Brand
             href="#home"
-            className="fw-semibold logo-text fs-2 text-white"
+            className="fw-semibold logo-text fs-2 text-white d-none d-lg-block"
           >
             Qandle
           </Navbar.Brand>

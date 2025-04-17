@@ -24,7 +24,7 @@ import "./SidebarComponent.css";
 const SidebarComponent = ({ show, closeSidebar }) => {
   const renderSidebarContent = () => (
     <>
-      <Col className="d-flex flex-column row-gap-2">
+      <div className="d-flex flex-column row-gap-2">
         <div className="img d-flex justify-content-center">
           <img className="Iconimg " src={sumagoIcon} alt="img not Found" />
         </div>
@@ -32,7 +32,7 @@ const SidebarComponent = ({ show, closeSidebar }) => {
           <img className="Profile-Pic" src={ProfilePic} alt="profile" />
           <span className="fw-bold">Vivek Sanjay Patil</span>
         </div>
-      </Col>
+      </div>
 
       <Col className="menuList pb-4 d-flex flex-column gap-3">
         <Link to="/" onClick={closeSidebar} className="Sidebar-menu">
@@ -66,7 +66,7 @@ const SidebarComponent = ({ show, closeSidebar }) => {
       <div className={`mobile-sidebar-overlay d-lg-none ${show ? "show" : ""}`}>
         <div className="mobile-sidebar shadow p-3">
           <button className="btn-close mb-3" onClick={closeSidebar}></button>
-          <Row className="mt-4 ">{renderSidebarContent()}</Row>
+          <Row className="mt-4 d-flex flex-column h-100">{renderSidebarContent()}</Row>
         </div>
         <div className="overlay-backdrop" onClick={closeSidebar}></div>
       </div>

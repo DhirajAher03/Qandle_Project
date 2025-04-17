@@ -12,22 +12,18 @@
 }
 .avg-In-Time{
     background-color: rgb(252, 231, 246);
-    /* overflow: auto;/ */
     height: 116px;
 }
 .avg-out-time{
     background-color: rgb(215, 234, 255);
-    /* overflow: auto; */
     height: 116px;
 }
 .avg-break{
     background-color: rgb(255, 228, 215);
-    /* overflow: auto; */
     height: 116px;
 }
 .paid-days{
     background-color: rgb(255, 219, 186);
-    /* overflow: auto; */
     height: 116px;
 }
 
@@ -48,3 +44,27 @@
     background-color: #ffffff;
     padding-top: 1rem;
   }
+
+/* Regularization request Styling */
+.Prof_img_Regularize{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.dateTimeSection{
+    background-color: antiquewhite;
+    padding: 25px;
+}
+
+.timer-icon{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: blue;
+    
+}
