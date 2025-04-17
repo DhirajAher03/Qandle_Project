@@ -76,3 +76,7 @@ body {
     color: #9a9ca1; /* Change this to any color you like */
     opacity: 1; /* Optional: ensures full visibility */
   }
+.login-logo {
+  max-width: 150px; /* Adjust according to your logo size */
+  height: auto;
+}

@@ -3,24 +3,29 @@ import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import './LoginCompo.css';
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-
+import company_logo from "../../assets/Sumago_logo.png";// Replace with your logo path
 const LoginComponent = () => {
-  const [showPassword, setShowPassword] = useState(false);//use to show or hide password
-  const [isEmployeeCode, setIsEmployeeCode] = useState(false);//use to toggle between employee code and email
+  const [showPassword, setShowPassword] = useState(false);
+  const [isEmployeeCode, setIsEmployeeCode] = useState(false);
 
   return (
     <>
       <Container fluid className="login-container p-0">
         <Row className="g-0 login-row">
           {/* Left Side - Image */}
-          <Col md={6} className="d-none d-md-flex login-left">
+          <Col lg={6} className="d-none d-lg-flex login-left">
             <div className="login-left-image"></div>
           </Col>
 
           {/* Right Side - Login Form */}
-          <Col md={6} xs={12} className="d-flex align-items-center justify-content-center login-right">
+          <Col lg={6} xs={12} className="d-flex align-items-center justify-content-center login-right">
             <Card className="login-card p-3 rounded-5 shadow">
               <Card.Body>
+                {/* Add Logo here for mobile/tablet view */}
+                <div className="text-center mb-4 d-lg-none">
+                  <img src={company_logo} alt="Company Logo" className="login-logo" />
+                </div>
+
                 <h3 className="mb-1 fs-5 text-dark">Sign in to your Qandle account</h3>
 
                 <Form>
@@ -78,7 +83,6 @@ const LoginComponent = () => {
                     <span
                       onClick={() => setShowPassword(!showPassword)}
                       className="position-absolute top-50 end-0 translate-middle-y me-3 cursor-pointer"
-                     
                     >
                       {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
                     </span>

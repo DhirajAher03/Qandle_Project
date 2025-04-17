@@ -18,10 +18,10 @@ function App() {
 
   return (
     <>
-      {/* <LoginComponent/> */}
+      <LoginComponent/>
 
 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Row lg={1} className='custom-row'>
           <NavbarComponent toggleSidebar={toggleSidebar} />
         </Row>
@@ -37,7 +37,7 @@ function App() {
             </Routes>
           </Col>
         </Row>
-      </BrowserRouter>
+      </BrowserRouter> */}
 
     </>
   )
