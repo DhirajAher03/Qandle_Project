@@ -23,7 +23,7 @@ const LeaveTable = () => {
 
   return (
     <div className="table-responsive">
-      <Table bordered hover className="mt-3">
+      <Table bordered hover className="">
         <thead className="table-light">
           <tr>
             <th>Leave Type</th>

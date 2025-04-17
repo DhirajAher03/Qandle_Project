@@ -80,7 +80,7 @@ const CasualLeaveCard = () => {
 const LeaveWithoutPayCard = () => {
   return (
     <div className="leave-card shadow-sm">
-      <div className="leave-card-header d-flex justify-content-between align-items-start">
+      <div className="leave-card-header d-flex justify-content-between align-items-start ">
         <h6 className="fw-bold">Leave Without Pay</h6>
         <Button size="sm" variant="outline-primary">Apply Leave</Button>
       </div>
@@ -91,7 +91,7 @@ const LeaveWithoutPayCard = () => {
         </div>
 
         <div className="leave-card-stats ms-4">
-          <Row className="text-center">
+          <Row className="text-center ">
             <Col>
             <strong className="text-primary leave-card-value text-nowrap">As per need</strong>
               <div className="leave-card-subtext">Accrued</div>
@@ -110,7 +110,7 @@ const LeaveWithoutPayCard = () => {
                   placement="top"
                   overlay={<Tooltip>Used* includes backdated leaves</Tooltip>}
                 >
-                  <span>Used* ⓘ</span>
+                  <span>Used ⓘ</span>
                 </OverlayTrigger>
               </div>
             </Col>
@@ -132,7 +132,7 @@ const GraphComponent = () => {
         <div className="col-md-6 mb-3 d-flex justify-content-center">
           <CasualLeaveCard />
         </div>
-        <div className="col-md-6 mb-3">
+        <div className="col-md-6 mb-3 d-flex justify-content-center">
           <LeaveWithoutPayCard />
         </div>
       </div>
