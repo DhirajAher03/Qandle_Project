@@ -9,6 +9,7 @@ import LeaveComponent from './Components/Leave/LeaveComponent'
 import { Col, Row } from 'react-bootstrap'
 import Attendance from './Components/Attendance/Attendance'
 import { useState } from 'react'
+import Timesheet from './Components/Timesheet/Timesheet'
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -34,6 +35,7 @@ function App() {
               <Route path="/" element={<Overview />}/>
               <Route path="/leave" element={<LeaveComponent />}/>
               <Route path="/attendance" element={<Attendance/>}/>
+              <Route path="/timesheet" element={<Timesheet/>}/>
             </Routes>
           </Col>
         </Row>

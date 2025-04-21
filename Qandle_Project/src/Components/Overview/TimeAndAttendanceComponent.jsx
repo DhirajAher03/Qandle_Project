@@ -180,7 +180,7 @@ const TimeAndAttendenceComponent = () => {
                   {isBreak ? 'End Break' : 'Start Break'}
                 </Button>
                 <Button
-                  variant={isClockedOut ? 'success' : 'danger'}
+                  variant={isClockedOut ? 'primary' : 'danger'}
                   onClick={() => {
                     if (isClockedOut) {
                       setIsClockedOut(false);

@@ -44,7 +44,7 @@ const SidebarComponent = ({ show, closeSidebar }) => {
         <Link to="/attendance" onClick={closeSidebar} className="Sidebar-menu">
           <IoKeyOutline className="me-2 fs-4 text-success" /> My Attendance
         </Link>
-        <Link to="#" onClick={closeSidebar} className="Sidebar-menu"><LuFileSpreadsheet className="me-2 fs-4 text-success" /> My Timesheet</Link>
+        <Link to="/timesheet" onClick={closeSidebar} className="Sidebar-menu"><LuFileSpreadsheet className="me-2 fs-4 text-success" /> My Timesheet</Link>
         <Link to="#" onClick={closeSidebar} className="Sidebar-menu"><MdPendingActions className="me-2 fs-4 text-primary" /> My Compensation</Link>
         <Link to="#" onClick={closeSidebar} className="Sidebar-menu"><FiTrendingUp className="me-2 fs-4 text-secondary" /> My Performance</Link>
         <Link to="#" onClick={closeSidebar} className="Sidebar-menu"><MdOutlinePersonSearch className="me-2 fs-3 text-primary" /> Recruitment</Link>
