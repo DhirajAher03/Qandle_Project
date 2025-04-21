@@ -36,7 +36,7 @@ const TimeAndAttendenceComponent = () => {
   const [breakTime, setBreakTime] = useState(0);
   const [workingTime, setWorkingTime] = useState(0);
   const [isBreak, setIsBreak] = useState(false);
-  const [isClockedOut, setIsClockedOut] = useState(false);
+  const [isClockedIn, setIsClockedIn] = useState(false);
   const [currentWeekIndex, setCurrentWeekIndex] = useState(0);
 
   const [showBreakModal, setShowBreakModal] = useState(false);
@@ -60,11 +60,12 @@ const TimeAndAttendenceComponent = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTime(new Date().toLocaleTimeString());
-      if (!isClockedOut && !isBreak) setWorkingTime((prev) => prev + 1);
-      if (!isClockedOut && isBreak) setBreakTime((prev) => prev + 1);
+      if (isClockedIn && !isBreak) setWorkingTime((prev) => prev + 1);
+      if (isClockedIn && isBreak) setBreakTime((prev) => prev + 1);
     }, 1000);
     return () => clearInterval(interval);
-  }, [isBreak, isClockedOut]);
+  }, [isBreak, isClockedIn]);
+
 
   const formatTime = (seconds) => {
     const h = String(Math.floor(seconds / 3600)).padStart(2, '0');
@@ -180,18 +181,19 @@ const TimeAndAttendenceComponent = () => {
                   {isBreak ? 'End Break' : 'Start Break'}
                 </Button>
                 <Button
-                  variant={isClockedOut ? 'primary' : 'danger'}
+                  variant={isClockedIn ? 'danger' : 'primary'}
                   onClick={() => {
-                    if (isClockedOut) {
-                      setIsClockedOut(false);
-                      setWorkingTime(0);
+                    if (isClockedIn) {
+                      setShowClockOutModal(true); // show modal to confirm clock out
                     } else {
-                      setShowClockOutModal(true);
+                      setIsClockedIn(true); // directly clock in
+                      setWorkingTime(0);
+                      setBreakTime(0);
                     }
                   }}
                   style={{ width: '140px', padding: '8px 12px', fontSize: '14px' }}
                 >
-                  {isClockedOut ? 'Clock In' : 'Clock Out'}
+                  {isClockedIn ? 'Clock Out' : 'Clock In'}
                 </Button>
 
               </div>
@@ -269,7 +271,7 @@ const TimeAndAttendenceComponent = () => {
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowClockOutModal(false)}>Cancel</Button>
           <Button variant="danger" onClick={() => {
-            setIsClockedOut(true);
+            setIsClockedIn(false); // reset to clocked out
             setShowClockOutModal(false);
           }}>
             Yes

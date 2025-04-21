@@ -3,18 +3,18 @@
   border: 1px solid #e0e0e0;
   border-radius: 30px;
   padding: 0px 15px 0px 15px;
-  display: inline-flex; /* important */
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-}
+} 
 .custom-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  padding: 6px 10px;
-  border-radius: 50%;
+  background-color: #ffffff !important;
+  border: 1px solid #ddd !important;
+  padding: 6px 10px !important;
+  border-radius: 50% !important;
   z-index: 2;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -34,32 +34,11 @@
   min-width: 220px;
   flex-shrink: 0;
 }
-.slick-dots li button:before {
-  font-size: 10px;
-  color: #4caf50;
-}
-.slick-dots li.slick-active button:before {
-  color: #fbc02d;
-}
-.slick-slider {
-  width: 100% !important;
-}
-
-.slick-slide > div {
-  display: flex;
-  justify-content: center;
-}
-
-.slick-list {
-  padding: 0 10px;
-}
 @media (max-width: 768px) {
   .custom-row {
     flex-direction: column !important;
   }
-  .slick-slider {
-    margin-top: 10px;
-  }
+
 }
 .custom-row {
   display: flex;
@@ -67,12 +46,12 @@
   justify-content: space-between;
 }
 .custom-arrow {
-  font-size: 16px;
+  font-size: 16px !important;
   color: #333;
   cursor: pointer;
 }
 .custom-arrow:hover {
-  color: #007bff;
+  color: #007bff !important;
 }
 .time-display {
   font-size: 2.5rem;

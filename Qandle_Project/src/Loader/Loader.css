@@ -1,0 +1,153 @@
+/* .graph-loader-container {
+  height: 100vh;
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bars {
+  display: flex;
+  gap: 30px;
+  align-items: flex-end;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar {
+  width: 30px;
+  background: #00ffe1;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
+  animation: pulse-bar 1.2s infinite ease-in-out;
+}
+
+.label {
+  margin-top: 10px;
+  color: #0ff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: monospace;
+  text-shadow: 0 0 10px #0ff;
+}
+
+
+.bar-0 {
+  height: 60px;
+  animation-delay: 0s;
+}
+.bar-1 {
+  height: 100px;
+  animation-delay: 0.2s;
+}
+.bar-2 {
+  height: 80px;
+  animation-delay: 0.4s;
+}
+.bar-3 {
+  height: 120px;
+  animation-delay: 0.6s;
+}
+.bar-4 {
+  height: 90px;
+  animation-delay: 0.8s;
+}
+.bar-5 {
+  height: 70px;
+  animation-delay: 1s;
+}
+
+@keyframes pulse-bar {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scaleY(1.3);
+    opacity: 1;
+  }
+}
+
+.loading-text {
+  color: #00ffe1;
+  font-size: 1.3rem;
+  animation: blinkText 1.6s infinite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #00ffe1;
+}
+
+@keyframes blinkText {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+ */
+ .sumago-loader-container {
+  height: 100vh;
+  background: radial-gradient(circle, #0b0b0b, #000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rotating-glow-ring {
+  width: 180px;
+  height: 180px;
+  border: 4px solid transparent;
+  border-top: 4px solid #ff0022;
+  border-right: 4px solid #ff0022;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  position: relative;
+  box-shadow: 0 0 25px #ff0022, 0 0 40px #ff0022 inset;
+}
+
+.inner-logo-circle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #0a0a0a;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 18px rgba(255, 0, 34, 0.7) inset;
+}
+
+.logo-img {
+  width: 155px;
+  height: 155px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px #ff0022);
+  
+}
+
+.loader-caption {
+  margin-top: 30px;
+  color: #ff0022;
+  font-size: 1.1rem;
+  font-family: 'Segoe UI', sans-serif;
+  animation: blinkText 1.5s infinite;
+  letter-spacing: 1px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes blinkText {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}

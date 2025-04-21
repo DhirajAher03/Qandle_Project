@@ -98,50 +98,53 @@ const LeaveOverviewComponent = () => {
         <div className="col-md-6" style={{ maxWidth: "100%" }}>
           <div className="d-flex justify-content-between align-items-center mb-3">
             <h5 className="fw-bold mb-0">Leave</h5>
-            <div className="d-flex gap-2">
-              {currentSlide > 0 && (
-                <button
-                  className="btn btn-light btn-sm rounded-circle p-1"
-                  onClick={() => sliderRef.current.slickPrev()}
-                >
-                  <IoChevronBackSharp />
-                </button>
-              )}
-              {currentSlide < leaveCards.length - 1 && (
-                <button
-                  className="btn btn-light btn-sm rounded-circle p-1"
-                  onClick={() => sliderRef.current.slickNext()}
-                >
-                  <IoChevronForwardSharp />
-                </button>
-              )}
-            </div>
           </div>
 
-          <Slider {...leaveSliderSettings} className="mb-4 px-2" ref={sliderRef}>
-            {leaveCards.map((card, index) => (
-              <div key={index} className="px-2">
-                <div
-                  className="d-flex align-items-center justify-content-between bg-light border rounded-pill px-4 py-3 h-100"
-                  style={{ minHeight: "80px", flex: 1 }}
-                >
-                  <div>
-                    <h5 className="mb-1 text-primary fw-bold">
-                      {card.value}{" "}
-                      <span className="small fw-semibold">{card.unit}</span>
-                    </h5>
-                    <p className="mb-0 fw-semibold small">{card.title}</p>
+          {/* Slider with arrows on sides */}
+          <div className="position-relative mb-4 px-2">
+            {currentSlide > 0 && (
+              <button
+                className=" btn-sm  top-50 start-0 translate-middle-y  custom-arrow "
+                onClick={() => sliderRef.current.slickPrev()}
+              >
+                <IoChevronBackSharp />
+              </button>
+            )}
+
+            <Slider {...leaveSliderSettings} ref={sliderRef}>
+              {leaveCards.map((card, index) => (
+                <div key={index} className="px-2">
+                  <div
+                    className="d-flex align-items-center justify-content-between bg-light border rounded-pill px-4 py-3 h-100"
+                    style={{ minHeight: "80px", flex: 1 }}
+                  >
+                    <div>
+                      <h5 className="mb-1 text-primary fw-bold ">
+                        {card.value}{" "}
+                        <span className="small fw-semibold">{card.unit}</span>
+                      </h5>
+                      <p className="mb-0 fw-semibold small">{card.title}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </Slider>
+
+            {currentSlide < leaveCards.length - 1 && (
+              <button
+                className="btn-sm top-50 end-0 translate-middle-y custom-arrow "
+                onClick={() => sliderRef.current.slickNext()}
+              >
+                <IoChevronForwardSharp />
+              </button>
+            )}
+          </div>
 
           {/* Period Dropdown */}
           <div className="d-flex justify-content-center mb-3">
             <div
               className="period-selector d-flex align-items-center gap-2 px-3 py-1 rounded-pill border"
-              style={{ maxWidth: "200px", width: "100%" }}
+              style={{ maxWidth: "210px", width: "100%" }}
             >
               <span className="fw-semibold">Period:</span>
               <select className="border-0 bg-transparent fw-semibold">
