@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LeaveComponent from './Components/Leave/LeaveComponent'
 import { Col, Row } from 'react-bootstrap'
 import Attendance from './Components/Attendance/Attendance'
+import Timesheet from './Components/Timesheet/Timesheet'
 import { useState } from 'react'
 
 function App() {
@@ -18,10 +19,10 @@ function App() {
 
   return (
     <>
-      <LoginComponent/>
+      {/* <LoginComponent/> */}
 
 
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Row lg={1} className='custom-row'>
           <NavbarComponent toggleSidebar={toggleSidebar} />
         </Row>
@@ -34,10 +35,11 @@ function App() {
               <Route path="/" element={<Overview />}/>
               <Route path="/leave" element={<LeaveComponent />}/>
               <Route path="/attendance" element={<Attendance/>}/>
+              <Route path='/timesheet' element={<Timesheet />}/>
             </Routes>
           </Col>
         </Row>
-      </BrowserRouter> */}
+      </BrowserRouter>
 
     </>
   )

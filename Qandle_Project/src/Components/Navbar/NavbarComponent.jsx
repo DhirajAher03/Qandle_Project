@@ -39,7 +39,7 @@ const NavbarComponent = ({ toggleSidebar }) => {
 
   return (
     <>
-      <Navbar className="bg-primary shadow-sm p-2 position-fixed w-100 z-3">
+      <Navbar className="bg-primary Navbar shadow-sm p-2 position-fixed w-100 z-3">
         <Container fluid className="d-flex align-items-center justify-content-between px-3">
           {/* Brand */}
           <Button variant="light" className="d-lg-none" onClick={toggleSidebar}>

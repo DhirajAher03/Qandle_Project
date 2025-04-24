@@ -49,7 +49,7 @@ const Attendance = () => {
           transition={false}
           id="noanim-tab-example"
         >
-          <Tab eventKey="Status" title="Status" className="pe-4">
+          <Tab eventKey="Status" title="Status" className="">
             <StatusTab />
           </Tab>
           <Tab eventKey="Regularize-Requests" title="Regularize-Requests">
