@@ -21,11 +21,11 @@ const LoginComponent = () => {
           <Col lg={6} xs={12} className="d-flex align-items-center justify-content-center login-right">
             <Card className="login-card p-3 rounded-5 shadow">
               <Card.Body>
+
                 {/* Add Logo here for mobile/tablet view */}
-                <div className="text-center mb-4 d-lg-none">
+                <div className="text-center mb-4 d-lg-none d-flex align-items-center justify-content-center ">
                   <img src={company_logo} alt="Company Logo" className="login-logo" />
                 </div>
-
                 <h3 className="mb-1 fs-5 text-dark">Sign in to your Qandle account</h3>
 
                 <Form>

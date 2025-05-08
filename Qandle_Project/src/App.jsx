@@ -8,9 +8,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LeaveComponent from './Components/Leave/LeaveComponent'
 import { Col, Row } from 'react-bootstrap'
 import Attendance from './Components/Attendance/Attendance'
+<<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import LoaderComponent from './Loader/LoaderComponent'
+=======
+>>>>>>> c8e6383217a07f07a2025f6f39ae0d6340a59358
 import Timesheet from './Components/Timesheet/Timesheet'
+import { useState } from 'react'
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -43,10 +47,17 @@ function App() {
           </Col>
           <Col className='col-12 col-lg-10 d-flex justify-content-center'>
             <Routes>
+<<<<<<< HEAD
               <Route path="/" element={<Overview />} />
               <Route path="/leave" element={<LeaveComponent />} />
               <Route path="/attendance" element={<Attendance />} />
               <Route path="/timesheet" element={<Timesheet />} />
+=======
+              <Route path="/" element={<Overview />}/>
+              <Route path="/leave" element={<LeaveComponent />}/>
+              <Route path="/attendance" element={<Attendance/>}/>
+              <Route path='/timesheet' element={<Timesheet />}/>
+>>>>>>> c8e6383217a07f07a2025f6f39ae0d6340a59358
             </Routes>
           </Col>
         </Row>

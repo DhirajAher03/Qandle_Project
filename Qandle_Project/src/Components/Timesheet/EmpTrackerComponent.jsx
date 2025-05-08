@@ -93,9 +93,9 @@ const EmpTrackerComponent = () => {
         </div>
         <div className="text-end ms-auto d-flex gap-3">
           <div className='d-flex align-items-center'>
-            <strong >Total Hours:</strong> {formatTime(totalMinutes)}
+            <strong >Total Hours:</strong> <span>{formatTime(totalMinutes)}</span>
             </div>
-          <Button type='submit'>Submit Timesheet</Button>
+          <Button type='submit' className='d-none d-md-block'  >Submit Timesheet</Button>
         </div>
       </div>
 
@@ -148,7 +148,11 @@ const EmpTrackerComponent = () => {
             <td><strong>{formatTime(totalMinutes)}</strong></td>
           </tr>
         </tbody>
+        
       </Table>
+      <div className="timesheet-button">
+      <Button type='submit' className='d-block d-md-none float-center'  >Submit Timesheet</Button>
+      </div>
     </Container>
   );
 };
