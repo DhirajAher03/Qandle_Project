@@ -192,7 +192,7 @@ const RequestComponent = () => {
         </Row>
       </div>
 
-      <div className="request-status bg-white">
+      {/* <div className="request-status bg-white">
         <Row className="p-2">
           <Col>
             <div className="d-flex gap-3 align-items-center">
@@ -211,7 +211,7 @@ const RequestComponent = () => {
             </div>
           </Col>
         </Row>
-      </div>
+      </div> */}
 
       <Row>
         <Col>

@@ -75,8 +75,8 @@ const HolidayComponent = () => {
       onChange={(e) => setLeaveType(e.target.value)}
       className="bg-white border text-dark"
     >
-      <option value="">Select Holiday Type</option>
-      <option value="All Holiday">All Holiday</option>
+      <option value="" disabled>Select Holiday Type</option>
+      <option value="All Holiday">All Holidays</option>
       <option value="Upcoming">Upcoming</option>
       <option value="Mandatory">Mandatory</option>
       <option value="Restricted">Restricted</option>

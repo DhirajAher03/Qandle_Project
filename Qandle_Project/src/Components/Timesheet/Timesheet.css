@@ -1,0 +1,12 @@
+/* Summary Component Styling */
+.profile-icon{
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+.Summary-header{
+    background-color: antiquewhite;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 8px;
+}

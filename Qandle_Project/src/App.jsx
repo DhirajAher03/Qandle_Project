@@ -10,6 +10,7 @@ import { Col, Row } from 'react-bootstrap'
 import Attendance from './Components/Attendance/Attendance'
 import { useState, useEffect } from 'react'
 import LoaderComponent from './Loader/LoaderComponent'
+import Timesheet from './Components/Timesheet/Timesheet'
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -24,14 +25,14 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
   if (loading) {
-    return <LoaderComponent/>;
+    return <LoaderComponent />;
   }
 
   return (
     <>
-      <LoginComponent/>
+      {/* <LoginComponent/> */}
 
-      {/* {loading ? <LoaderComponent /> : null}
+      {loading ? <LoaderComponent /> : null}
       <BrowserRouter>
         <Row lg={1} className='custom-row'>
           <NavbarComponent toggleSidebar={toggleSidebar} />
@@ -45,10 +46,11 @@ function App() {
               <Route path="/" element={<Overview />} />
               <Route path="/leave" element={<LeaveComponent />} />
               <Route path="/attendance" element={<Attendance />} />
+              <Route path="/timesheet" element={<Timesheet />} />
             </Routes>
           </Col>
         </Row>
-      </BrowserRouter> */}
+      </BrowserRouter>
 
     </>
   )
